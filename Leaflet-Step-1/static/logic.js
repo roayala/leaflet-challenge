@@ -11,6 +11,8 @@ d3.json(urlMonth, function(data) {
     // console.log(data.features);
 });
 
+
+
 function getColor(d) {
     return d > 5 ? '#BD0026' :
         d > 4 ? '#E31A1C' :
@@ -61,9 +63,6 @@ function createFeatures(features) {
         } else if (mag < 0) {
             radius = 500;
         }
-
-
-
         return L.circle(latlng, {
             fillColor: getColor(feature.properties.mag),
             fillOpacity: 0.4,
